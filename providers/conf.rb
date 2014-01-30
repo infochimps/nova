@@ -94,6 +94,8 @@ action :create do
     network_options["force_dhcp_release"] = node[net_provider]["network"]["force_dhcp_release"]
     network_options["send_arp_for_ha"] = node[net_provider]["network"]["send_arp_for_ha"]
     network_options["auto_assign_floating_ip"] = node[net_provider]["network"]["auto_assign_floating_ip"]
+    network_options["floating_pool_name"] = node[net_provider]["network"]["floating_pool_name"]
+    network_options["floating_range"] = node[net_provider]["network"]["floating_range"]
     network_options["dhcp_domain"] = node[net_provider]["network"]["dhcp_domain"]
     network_options["dhcpbridge_flagfile"] = "/etc/nova/nova.conf"
     network_options["dhcpbridge"] = "/usr/bin/nova-dhcpbridge"
